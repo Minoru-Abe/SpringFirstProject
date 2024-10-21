@@ -1,13 +1,27 @@
 package com.telusko;
 
+import java.beans.ConstructorProperties;
+
 public class Alien {
-	
-	
+
 	private int age;
+	private int salary;
 	private Laptop lap;
-	
-	public Alien() {
-		System.out.println("Alien is created");
+
+	@ConstructorProperties({ "age", "lap" })
+	public Alien(int age, Laptop lap) {
+		this.age = age;
+		this.lap = lap;
+		System.out.println("Alien is created with two parameter");
+	}
+
+	@ConstructorProperties({ "age", "salary", "lap" })
+	public Alien(int age, int salary, Laptop lap) {
+		super();
+		System.out.println("Alien is created with three parameters");
+		this.age = age;
+		this.salary = salary;
+		this.lap = lap;
 	}
 
 	public void code() {
@@ -32,9 +46,5 @@ public class Alien {
 		System.out.println("Setter injection lap");
 		this.lap = lap;
 	}
-	
-	
-	
-	
 
 }
