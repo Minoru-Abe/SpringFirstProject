@@ -6,27 +6,27 @@ public class Alien {
 
 	private int age;
 	private int salary;
-	private Laptop lap;
+	private Computer com;
 
-	@ConstructorProperties({ "age", "lap" })
-	public Alien(int age, Laptop lap) {
+	@ConstructorProperties({ "age", "com" })
+	public Alien(int age, Computer com) {
 		this.age = age;
-		this.lap = lap;
+		this.com = com;
 		System.out.println("Alien is created with two parameter");
 	}
 
-	@ConstructorProperties({ "age", "salary", "lap" })
-	public Alien(int age, int salary, Laptop lap) {
+	@ConstructorProperties({ "age", "salary", "com" })
+	public Alien(int age, int salary, Computer com) {
 		super();
 		System.out.println("Alien is created with three parameters");
 		this.age = age;
 		this.salary = salary;
-		this.lap = lap;
+		this.com = com;
 	}
 
 	public void code() {
 		System.out.println("Coding");
-		lap.compile();
+		com.compile();
 	}
 
 	public int getAge() {
@@ -38,13 +38,13 @@ public class Alien {
 		this.age = age;
 	}
 
-	public Laptop getLap() {
-		return lap;
+	public Computer getCom() {
+		return com;
 	}
 
-	public void setLap(Laptop lap) {
-		System.out.println("Setter injection lap");
-		this.lap = lap;
+	public void setCom(Computer com) {
+		this.com = com;
 	}
+
 
 }

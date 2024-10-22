@@ -14,6 +14,7 @@ public class App {
 		obj.code();
 
 		Alien obj3 = (Alien) context.getBean("alien2");
+		obj.code();
 
 	}
 
