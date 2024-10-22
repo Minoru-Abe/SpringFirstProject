@@ -8,6 +8,11 @@ public class Alien {
 	private int salary;
 	private Computer com;
 
+	
+	public Alien() {
+		System.out.println("Default constructor");
+	}
+	
 	@ConstructorProperties({ "age", "com" })
 	public Alien(int age, Computer com) {
 		this.age = age;

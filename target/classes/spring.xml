@@ -3,20 +3,22 @@
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="alien1" class="com.telusko.Alien" scope="prototype">
-		<constructor-arg name="com" ref="desk" />
-		<constructor-arg name="age" value="21" />
+	<bean id="alien1" class="com.telusko.Alien" scope="prototype" autowire="byType">
+		<property name="age" value="21" />
+
+<!-- 		<constructor-arg name="com" ref="desk" /> -->
+<!-- 		<constructor-arg name="age" value="21" /> -->
 	</bean>
 
-	<bean id="alien2" class="com.telusko.Alien" scope="prototype">
-		<constructor-arg name="salary" value="500000" />
-		<constructor-arg name="age" value="21" />
-		<constructor-arg name="com" ref="desk" />
+<!-- 	<bean id="alien2" class="com.telusko.Alien" scope="prototype"> -->
+<!-- 		<constructor-arg name="salary" value="500000" /> -->
+<!-- 		<constructor-arg name="age" value="21" /> -->
+<!-- 		<constructor-arg name="com" ref="desk" /> -->
 
-	</bean>
+<!-- 	</bean> -->
 
-	<bean id="lap" class="com.telusko.Laptop" />
-	<bean id="desk" class="com.telusko.Desktop" />
+	<bean id="com1" class="com.telusko.Laptop" />
+	<bean id="com2" class="com.telusko.Desktop" />
 
 
 </beans>
