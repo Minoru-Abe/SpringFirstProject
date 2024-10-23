@@ -13,6 +13,12 @@ public class App {
 		
 		Alien obj = context.getBean(Alien.class);
 		obj.code();
+		System.out.println(obj.getSalary());
+		
+		
+		Alien obj2 = context.getBean(Alien.class);
+		obj2.setSalary(10000000);
+		System.out.println(obj2.getSalary());
 		
 //		Computer dt = context.getBean(Desktop.class);
 //		dt.compile();

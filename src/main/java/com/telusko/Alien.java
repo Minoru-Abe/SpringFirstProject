@@ -2,13 +2,22 @@ package com.telusko;
 
 import java.beans.ConstructorProperties;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")
 public class Alien {
 
 	private int age;
+	@Value("250000")
 	private int salary;
+	
+	@Autowired
+	@Qualifier("laptop")
 	private Computer com;
 
 	public Alien() {
@@ -53,4 +62,14 @@ public class Alien {
 		this.com = com;
 	}
 
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	
+	
 }
