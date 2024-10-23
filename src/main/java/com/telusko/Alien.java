@@ -2,17 +2,19 @@ package com.telusko;
 
 import java.beans.ConstructorProperties;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Alien {
 
 	private int age;
 	private int salary;
 	private Computer com;
 
-	
 	public Alien() {
 		System.out.println("Default constructor");
 	}
-	
+
 	@ConstructorProperties({ "age", "com" })
 	public Alien(int age, Computer com) {
 		this.age = age;
@@ -50,6 +52,5 @@ public class Alien {
 	public void setCom(Computer com) {
 		this.com = com;
 	}
-
 
 }
