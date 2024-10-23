@@ -11,11 +11,14 @@ public class App {
 		
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		
-		Computer dt = context.getBean(Desktop.class);
-		dt.compile();
+		Alien obj = context.getBean(Alien.class);
+		obj.code();
 		
-		Computer dt2 = context.getBean(Desktop.class);
-		dt2.compile();
+//		Computer dt = context.getBean(Desktop.class);
+//		dt.compile();
+//		
+//		Computer dt2 = context.getBean(Desktop.class);
+//		dt2.compile();
 		
 		
 //		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
